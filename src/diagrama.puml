@@ -1,0 +1,38 @@
+@startuml Cliente
+class Cliente {
+    -nome: string
+    -dinheiro: double
+    +EscolhaProduto(): void
+    +CompararValores(): void
+    +LevarProduto(): void
+    +DevolverProduto(): void
+
+}
+
+Class Produto {
+    -produto: string
+    -valor: double
+    -quantidade: int
+    +ConferirQuantidade(): void
+}
+
+Class Atendente {
+    -atendente: string
+    +AjudaCliente(): void
+}
+Class Caixa{
+    -Compra: string
+    +SolicitarDados(): void
+    +VerificarDados(): void
+    +ArmazenarDados(): void
+    
+    
+
+}
+class Cliente
+
+Atendente - Cliente : ajuda >
+Cliente - Produto :  >
+Cliente -- Caixa : > pagar
+@enduml
+
